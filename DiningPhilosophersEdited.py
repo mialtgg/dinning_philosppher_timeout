@@ -190,6 +190,26 @@ def check_forks(philosophers: list[Philosopher], forks: list[Fork]):
                 system_time = 0
 
 
+# def check_forks(philosophers: list[Philosopher], forks: list[Fork]):
+#     system_time = 0
+#     while True:
+#         eating_philosophers = sum(philosopher.eating for philosopher in philosophers)
+    
+#         if eating_philosophers == 1 or eating_philosophers == 2:
+#             system_time = 0
+#         else:
+#             time.sleep(1)
+#             system_time += 1
+#             if system_time > 15:
+#                 fork_index = random.randint(0, len(forks)-1)
+#                 fork = forks[fork_index]
+#                 with fork:
+#                     pass  
+#                 system_time = 0
+#  direkt şu kodu  fork.__exit__(*sys.exc_info())
+# __exit__ metodunu doğrudan çağırmak, nesnenin yaşam döngüsü üzerinde düzgün bir şekilde çalışmayabilir. Ayrıca, with bloğu içinde kullanılmadığı için kilidi serbest bırakma işlemi gerçekleşmeyebilir                
+
+
 def philosopher_information(philosophers: list[Philosopher]):
     
     while True:
